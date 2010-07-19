@@ -8,3 +8,5 @@ remove_file "public/images/rails.png"
 git :init
 
 append_file '.gitignore', load_template('gitignore','git')
+
+gem 'rails3-generators'
