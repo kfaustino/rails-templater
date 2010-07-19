@@ -5,6 +5,9 @@ remove_file "public/favicon.ico"
 remove_file "public/robots.txt"
 remove_file "public/images/rails.png"
 
+create_file 'log/.gitkeep'
+create_file 'tmp/.gitkeep'
+
 git :init
 
 append_file '.gitignore', load_template('gitignore','git')
