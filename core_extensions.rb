@@ -2,8 +2,19 @@ module Rails
   module Generators
     module Actions
       
-      def generator_path(name)
-        File.join File.dirname(__FILE__), 'generators', "#{name}.rb"
+      attr_accessor :template_generators
+      
+      def initialize_templater
+        @template_generators = []
+      end
+      
+      def add_template_generator(name)
+        @template_generators ||= []
+        @template_generators << name
+      end
+
+      def recipe(name)
+        File.join File.dirname(__FILE__), 'recipes', "#{name}.rb"
       end
       
       def load_template(file, parent)
