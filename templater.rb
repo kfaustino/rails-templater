@@ -7,6 +7,7 @@ load_options
 required_recipes = %w(default jquery mongoid haml rspec factory_girl)
 required_recipes.each {|required_recipe| apply recipe(required_recipe)}
 
+apply(recipe('cucumber')) if yes?("Do you want to come cukes?")  
 apply recipe('design')
 
 run 'bundle install'
