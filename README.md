@@ -7,7 +7,7 @@ This is a template which allows creating new Ruby on Rails 3 applications quickl
 ## Getting started
 
 * Clone rails-templater to your hard drive
-* Generate the Rails application: <pre><code>rails new application_name -JOT -m /path/to/rails-templater/templater.rb
+* Generate the Rails application: <pre><code>rails new application_name -JOT -m /path/to/rails-templater/templater.rb</code></pre>
   
 ## Generated Application
 
