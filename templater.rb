@@ -2,11 +2,10 @@ require File.join(File.dirname(__FILE__), 'core_extensions.rb')
 
 initialize_templater
 
-load_options
-
 required_recipes = %w(default jquery mongoid haml rspec factory_girl)
 required_recipes.each {|required_recipe| apply recipe(required_recipe)}
 
+load_options
 apply(recipe('cucumber')) if yes?("Do you want to come cukes?")  
 apply recipe('design')
 
@@ -24,3 +23,6 @@ end
 END
 
 environment generators_configuration
+
+git :add => "."
+git :commit => "-m 'Initial commit'"  
