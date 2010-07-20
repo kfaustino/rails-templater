@@ -6,6 +6,7 @@ apply recipe('default')
 apply recipe('jquery')
 apply recipe('mongoid')
 apply recipe('haml')
+apply recipe('rspec')
 
 run 'bundle install'
 
