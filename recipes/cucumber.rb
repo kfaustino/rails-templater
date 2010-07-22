@@ -12,4 +12,8 @@ EOF
 
 stategies <<  lambda do
   generate 'cucumber:install --rspec --capybara --skip-database'
+
+  # Mongoid truncation strategy
+  create_file 'features/support/hooks.rb', load_template('features/support/hooks.rb', 'mongoid')
+  
 end
