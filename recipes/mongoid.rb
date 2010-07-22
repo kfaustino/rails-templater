@@ -5,4 +5,5 @@ create_file 'lib/tasks/mongo.rake', load_template('lib/tasks/mongo.rake', 'mongo
 
 stategies << lambda do
   generate 'mongoid:config'
+  run 'cp config/mongoid.yml config/mongoid.yml.example'
 end
