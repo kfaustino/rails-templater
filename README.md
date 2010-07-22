@@ -29,6 +29,7 @@ Rails Templater will generate the following:
 
 * [RSpec](http://github.com/rspec/rspec) for testing
 * [factory_girl](http://github.com/thoughtbot/factory_girl) for fixture replacement
+* [remarkable](http://github.com/remarkable/remarkable) for ActiveModel RSpec matchers
 * Optionally uses [Cucumber](http://github.com/aslakhellesoy/cucumber-rails) for integration tests
     
 ## Note on Patches/Pull Requests
