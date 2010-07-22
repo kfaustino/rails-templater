@@ -8,6 +8,8 @@ create_file 'README'
 create_file 'log/.gitkeep'
 create_file 'tmp/.gitkeep'
 
+gsub_file 'config/application.rb', 'require "rails/test_unit/railtie"', '# require "rails/test_unit/railtie"'
+
 git :init
 
 append_file '.gitignore', load_template('gitignore','git')
