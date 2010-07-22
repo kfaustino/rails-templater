@@ -2,16 +2,16 @@ module Rails
   module Generators
     module Actions
 
-      attr_accessor :template_generators, :template_options
+      attr_accessor :stategies
+      attr_reader :template_options
 
       def initialize_templater
-        @template_generators = []
+        @stategies = []
         @template_options = {}
       end
-
-      def add_template_generator(name)
-        @template_generators ||= []        
-        @template_generators << name
+      
+      def execute_stategies
+        stategies.each {|stategy| stategy.call }
       end
 
       def load_options

@@ -11,9 +11,7 @@ apply recipe('design')
 
 run 'bundle install'
 
-template_generators.each do |generator|
-  generate generator
-end
+execute_stategies
 
 generators_configuration = <<-END
 config.generators do |g|

@@ -4,4 +4,4 @@ group :development, :test do
 end
 EOF
 
-add_template_generator 'rspec:install'
+stategies << lambda { generate 'rspec:install' }
