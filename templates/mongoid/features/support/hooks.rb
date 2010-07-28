@@ -1,3 +1,3 @@
 Before do |scenario|
-  Mongoid.master.collections.reject { |c| c.name == 'system.indexes'}.each(&:drop)
+  Mongoid.master.collections.select {|c| c.name !~ /system/ }.each(&:drop)
 end
