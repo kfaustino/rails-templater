@@ -1,4 +1,4 @@
-gem 'mongoid', '>= 2.0.0.beta13'
+gem 'mongoid', '>= 2.0.0.beta.14'
 gem 'bson_ext', '1.0.4'
 
 create_file 'lib/tasks/mongo.rake', load_template('lib/tasks/mongo.rake', 'mongoid')
