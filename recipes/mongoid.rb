@@ -1,5 +1,5 @@
-gem 'mongoid', '>= 2.0.0.beta.16'
-gem 'bson_ext', '1.0.7'
+gem 'mongoid', '2.0.0.beta.17'
+gem 'bson_ext', '1.0.4'
 
 stategies << lambda do
   generate 'mongoid:config'
