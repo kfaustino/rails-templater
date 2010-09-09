@@ -1,9 +1,10 @@
 !!! 5
 %html
-%head
-  = csrf_meta_tag
-  /[if lt IE 9]
-    = javascript_include_tag 'html5'
-%body
-  = yield
-  = javascript_include_tag :defaults
+  %head
+    = stylesheet_link_tag :all
+    = javascript_include_tag :defaults
+    = csrf_meta_tag
+    /[if lt IE 9]
+      = javascript_include_tag 'html5'
+  %body
+    = yield
