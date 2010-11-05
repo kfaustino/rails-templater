@@ -12,7 +12,11 @@ stategies <<  lambda do
   Dir[File.expand_path(File.join(File.dirname(__FILE__),'..','..','spec','factories','*.rb'))].each {|f| require f}
 
   END
-  
+
+  inject_into_file "features/support/env.rb",
+    "\nCapybara.save_and_open_page_path = 'tmp/capybara/'",
+    :after => 'Capybara.default_selector = :css'
+
   inject_into_file "features/support/env.rb", cukes_factory_girl, :after => 'ActionController::Base.allow_rescue = false'
 
   # Mongoid truncation strategy
