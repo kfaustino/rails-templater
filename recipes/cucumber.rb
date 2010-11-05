@@ -1,4 +1,4 @@
-gem 'capybara', :group => :test
+gem 'capybara', '0.3.9', :group => :test
 gem 'cucumber-rails', :group => :test
 gem 'launchy', :group => :test
 
