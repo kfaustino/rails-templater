@@ -1,23 +1,18 @@
-gem 'capybara', '0.3.9', :group => :test
+gem 'capybara', '0.4.0', :group => :test
 gem 'cucumber-rails', :group => :test
 gem 'launchy', :group => :test
 
 stategies <<  lambda do
   generate 'cucumber:install --rspec --capybara --skip-database'
-
-  cukes_factory_girl = <<-END
-
-  require 'factory_girl'
-  require 'factory_girl/step_definitions'
-  Dir[File.expand_path(File.join(File.dirname(__FILE__),'..','..','spec','factories','*.rb'))].each {|f| require f}
-
-  END
+  
+  gsub_file 'features/support/env.rb', 
+  "require 'cucumber/rails/capybara_javascript_emulation' # Lets you click links with onclick javascript handlers without using @culerity or @javascript", ''
 
   inject_into_file "features/support/env.rb",
     "\nCapybara.save_and_open_page_path = 'tmp/capybara/'",
     :after => 'Capybara.default_selector = :css'
 
-  inject_into_file "features/support/env.rb", cukes_factory_girl, :after => 'ActionController::Base.allow_rescue = false'
+  inject_into_file "features/support/env.rb", load_snippet('factory_girl', 'cucumber'), :after => 'ActionController::Base.allow_rescue = false'
 
   # Mongoid truncation strategy
   create_file 'features/support/hooks.rb', load_template('features/support/hooks.rb', 'mongoid')

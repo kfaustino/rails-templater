@@ -6,7 +6,7 @@ required_recipes = %w(default jquery mongoid haml rspec factory_girl remarkable)
 required_recipes.each {|required_recipe| apply recipe(required_recipe)}
 
 load_options
-apply(recipe('cucumber')) if yes?("Do you want to some cukes?")  
+apply(recipe('cucumber')) if yes?("Would you like to add integration testing with Cucumber? [y|n]: ", Thor::Shell::Color::GREEN)  
 apply recipe('design')
 
 run 'bundle install'
