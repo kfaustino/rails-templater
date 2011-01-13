@@ -11,7 +11,7 @@ apply recipe('design')
 
 run 'bundle install'
 
-execute_stategies
+execute_post_bundler_strategies
 
 environment load_snippet('generators', 'rails')
 

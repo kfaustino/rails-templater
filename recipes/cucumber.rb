@@ -2,7 +2,7 @@ gem 'capybara', '0.4.0', :group => :test
 gem 'cucumber-rails', :group => :test
 gem 'launchy', :group => :test
 
-stategies <<  lambda do
+post_bundler_strategies <<  lambda do
   generate 'cucumber:install --rspec --capybara --skip-database'
   
   gsub_file 'features/support/env.rb', 
