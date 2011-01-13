@@ -13,13 +13,7 @@ run 'bundle install'
 
 execute_stategies
 
-generators_configuration = <<-END
-config.generators do |g|
-  g.fixture_replacement :factory_girl, :dir => 'spec/factories'
-end
-END
-
-environment generators_configuration
+environment load_snippet('generators', 'rails')
 
 git :add => "."
 git :commit => "-m 'Initial commit'"  
