@@ -1,4 +1,4 @@
-gem 'rspec-rails', '>= 2.4.0', :group => [:development]
+gem 'rspec-rails', '>= 2.4.1', :group => [:development]
 
 stategies << lambda do
   generate 'rspec:install'
