@@ -4,10 +4,15 @@ This is a template which allows creating new Ruby on Rails 3 applications quickl
 
     rails new application_name -JOT -m templater.rb
 
-## Getting started
+## Install
 
-* Clone rails-templater to your hard drive
-* Generate the Rails application: <pre><code>rails new application_name -JOT -m /path/to/rails-templater/templater.rb</code></pre>
+    gem install rails_templater
+  
+## Usage
+
+At the command prompt, create a new Rails application using rails_templater:
+
+    templater myapp_name
   
 ## Generated Application
 
@@ -22,7 +27,7 @@ Rails Templater will generate the following:
 
 ## Database
 
-* Uses [Mongoid](http://mongoid.org/) as the Object Document Model
+* Uses [Mongoid](http://mongoid.org/) as the Object Document Mapper
 * TODO: Optionally add the ability for other databases
 
 ## Testing
@@ -35,5 +40,5 @@ Rails Templater will generate the following:
 ## Note on Patches/Pull Requests
  
 * Fork the project.
-* Make your feature addition or bug fix.
-* Send me a pull request. Bonus points for topic branches.
+* Make your feature addition or bug fix in a branch.
+* Send me a pull request.
