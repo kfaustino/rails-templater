@@ -5,8 +5,10 @@ initialize_templater
 required_recipes = %w(default mongoid jquery haml rspec factory_girl remarkable)
 required_recipes.each {|required_recipe| apply recipe(required_recipe)}
 
+say("\nInitial generation complete\n", Thor::Shell::Color::YELLOW)
+
 load_options
-apply(recipe('cucumber')) if yes?("Would you like to add integration testing with Cucumber? [y|n]: ", Thor::Shell::Color::GREEN)  
+apply(recipe('cucumber')) if yes?("\nWould you like to add integration testing with Cucumber? [y|n]: ", Thor::Shell::Color::BLUE)  
 apply recipe('design')
 
 run 'bundle install'
