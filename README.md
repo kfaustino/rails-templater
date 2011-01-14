@@ -8,7 +8,7 @@ This is a template which allows creating new Ruby on Rails 3 applications quickl
   
 ## Usage
 
-At the command prompt, create a new Rails application using rails_templater:
+At the command prompt, create a new Rails application using the *templater* command:
 
     templater myapp_name
   
