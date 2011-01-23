@@ -17,5 +17,7 @@ execute_post_bundler_strategies
 
 environment load_snippet('generators', 'rails')
 
+directory File.join(File.dirname(__FILE__),'generators'), 'lib/generators'
+
 git :add => "."
 git :commit => "-m 'Initial commit'"  

@@ -1,5 +1,5 @@
 gem 'mongoid', '2.0.0.beta.20'
-gem 'bson_ext', '~> 1.1.2'
+gem 'bson_ext', '~> 1.1'
 
 post_bundler_strategies << lambda do
   generate 'mongoid:config'
