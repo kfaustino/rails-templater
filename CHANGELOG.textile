@@ -1,0 +1,9 @@
+h1. Changelog
+
+*0.0.2 (January 23, 2011)*:
+
+p(.Add a custom generator for FactoryGirl which uses the new 2.0.0 syntax
+
+*0.0.1 (January 13, 2011)*
+
+p(.First version
