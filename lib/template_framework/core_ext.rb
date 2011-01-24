@@ -3,7 +3,7 @@ module Rails
     module Actions
      
       def templater
-        @templater ||= RailsTemplater::Templater.new(self)
+        @templater ||= RailsTemplater::Templater.new
       end
      
       def execute_post_bundler_strategies

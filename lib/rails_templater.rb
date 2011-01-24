@@ -1,4 +1,4 @@
-require 'active_support'
+require 'active_support/core_ext/string'
 
 module RailsTemplater
   extend self

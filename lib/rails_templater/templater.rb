@@ -4,8 +4,7 @@ module RailsTemplater
     attr_accessor :post_bundler_strategies
     attr_reader :template_options
 
-    def initialize(generator)
-      @generator = generator
+    def initialize
       @post_bundler_strategies = []
       @template_options = {}
       @template_framework_path = File.join(File.dirname(__FILE__), '..', 'template_framework')

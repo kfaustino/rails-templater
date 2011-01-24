@@ -1,0 +1,1 @@
+TEMPLATE_FRAMEWORK_PATH = File.join(File.dirname(__FILE__), '..', '..','lib', 'template_framework')
