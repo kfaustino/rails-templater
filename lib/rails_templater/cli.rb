@@ -6,7 +6,7 @@ module RailsTemplater
     desc "Generates a new Rails application with templater'"
 
     def run_templater
-      system("rails new #{application_name} -JOT -m #{RailsTemplater::template_path}")
+      system("rails new #{application_name} -JOT -m #{RailsTemplater::template_runner}")
     end
 
   end

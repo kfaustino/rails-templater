@@ -14,4 +14,4 @@ get "http://html5shiv.googlecode.com/svn/trunk/html5.js", "public/javascripts/ht
 
 git :init
 
-append_file '.gitignore', load_template('gitignore','git')
+append_file '.gitignore', templater.load_template('gitignore','git')
