@@ -10,6 +10,10 @@ module RailsTemplater
       @template_framework_path = File.join(File.dirname(__FILE__), '..', 'template_framework')
     end
 
+    def orm
+      @orm ||= Orm.new
+    end
+
     def recipe(name)
       File.expand_path("recipes/#{name}.rb", @template_framework_path)
     end

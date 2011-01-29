@@ -4,6 +4,8 @@ describe RailsTemplater::Templater do
 
   let(:group) { 'sample' }
 
+  its(:orm) { should be_kind_of(RailsTemplater::Orm) }
+
   it "generates a recipe path based on a name" do
     subject.recipe("mongoid").should == File.expand_path('recipes/mongoid.rb', TEMPLATE_FRAMEWORK_PATH)
   end

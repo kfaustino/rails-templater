@@ -4,6 +4,7 @@ module RailsTemplater
   extend self
   
   autoload :Cli, 'rails_templater/cli'
+  autoload :Orm, 'rails_templater/orm'
   autoload :Templater, 'rails_templater/templater'
   
   def template_runner
