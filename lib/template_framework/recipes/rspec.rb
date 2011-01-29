@@ -1,5 +1,6 @@
 gem 'rspec-rails', '>= 2.4.1', :group => [:development]
 
+remove_dir 'test'
 gsub_file 'config/application.rb', 'require "rails/test_unit/railtie"', '# require "rails/test_unit/railtie"'
 
 templater.post_bundler_strategies << lambda do
@@ -14,3 +15,5 @@ templater.post_bundler_strategies << lambda do
     inject_into_file spec_helper_path, templater.load_snippet('mongoid', 'rspec'), :after => "# config.use_transactional_fixtures = true\n"
   end
 end
+
+apply(templater.recipe('remarkable')) if yes?("\n\nWould you like to add Remarkable RSpec matchers? [y|n]: ", Thor::Shell::Color::BLUE)

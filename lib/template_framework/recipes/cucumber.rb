@@ -15,7 +15,7 @@ templater.post_bundler_strategies <<  lambda do
     "\nCapybara.save_and_open_page_path = 'tmp/capybara/'",
     :after => 'Capybara.default_selector = :css'
 
-  inject_into_file "features/support/env.rb", templater.load_snippet('factory_girl', 'cucumber'), :after => 'ActionController::Base.allow_rescue = false'
+  inject_into_file "features/support/env.rb", templater.load_snippet("factory_girl_#{templater.testing_framework.type}", 'cucumber'), :after => 'ActionController::Base.allow_rescue = false'
 
   # Mongoid truncation strategy
   if templater.orm.mongoid?
