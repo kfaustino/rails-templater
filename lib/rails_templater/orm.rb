@@ -1,8 +1,6 @@
 module RailsTemplater
   class Orm
     
-    class NotSupportedError < Exception; end
-    
     DEFAULT = :mongoid
     SUPPORTED_TYPES = [:active_record, :mongoid]
 

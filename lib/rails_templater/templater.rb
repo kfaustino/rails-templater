@@ -31,5 +31,9 @@ module RailsTemplater
 
     end
     
+    def testing_framework
+      @testing_framework ||= TestingFramework.new
+    end
+    
   end
 end

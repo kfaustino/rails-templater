@@ -26,10 +26,10 @@ describe RailsTemplater::Orm do
     
   end
   
-  it "sets type to only supported ORMS" do
+  it "only sets type to supported ORMs" do
     expect{
       subject.type = :mongo_mapper
-    }.to raise_error(RailsTemplater::Orm::NotSupportedError)
+    }.to raise_error(RailsTemplater::NotSupportedError)
   end
   
   
