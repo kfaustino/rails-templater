@@ -7,7 +7,7 @@ cucumber_generate_command << ' --skip-database' if templater.orm.mongoid?
 cucumber_generate_command << ' --rspec' if templater.testing_framework.rspec?
 cucumber_generate_command << ' --testunit' if templater.testing_framework.test_unit?
 
-templater.post_bundler_strategies <<  lambda do
+templater.post_bundler do
   generate cucumber_generate_command
 
   gsub_file 'features/support/env.rb',

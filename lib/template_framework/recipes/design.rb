@@ -17,7 +17,7 @@ if templater.template_options[:design] == :compass
 
   compass_command = "compass init rails . --using blueprint/semantic --css-dir=#{compass_css_dir} --sass-dir=#{compass_sass_dir} "
 
-  templater.post_bundler_strategies << lambda do
+  templater.post_bundler do
     puts "Beginning Compass setup"
     run compass_command
     puts "Compass has been setup"

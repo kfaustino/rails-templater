@@ -3,7 +3,7 @@ gem 'rspec-rails', '>= 2.4.1', :group => [:development]
 remove_dir 'test'
 gsub_file 'config/application.rb', 'require "rails/test_unit/railtie"', '# require "rails/test_unit/railtie"'
 
-templater.post_bundler_strategies << lambda do
+templater.post_bundler do
   generate 'rspec:install'
 
   spec_helper_path = 'spec/spec_helper.rb'
