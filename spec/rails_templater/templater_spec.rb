@@ -21,7 +21,7 @@ describe RailsTemplater::Templater do
   end
 
   describe "#load_snippet" do
-    
+
     let(:snippet_name) { 'sample_snippet' }
 
     before(:each) do
@@ -33,9 +33,9 @@ describe RailsTemplater::Templater do
     end
 
   end
-  
+
   describe "#load_template" do
-    
+
     let(:template_name) { 'sample_template.rb' }
 
     before(:each) do
@@ -44,6 +44,19 @@ describe RailsTemplater::Templater do
 
     it "loads a template" do
       subject.load_template(template_name, group).should == load_fixture(template_name)
+    end
+
+  end
+
+  describe "#post_bundler" do
+
+    it "adds blocks to post_bundler_strategies" do
+      subject.post_bundler do
+        "Hi"
+      end
+      subject.post_bundler_strategies.should have(1).item
+      result = subject.post_bundler_strategies.first.call
+      result.should == 'Hi'
     end
 
   end

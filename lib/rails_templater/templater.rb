@@ -1,8 +1,7 @@
 module RailsTemplater
   class Templater
 
-    attr_accessor :post_bundler_strategies
-    attr_reader :template_options
+    attr_reader :post_bundler_strategies, :template_options
 
     def initialize
       @post_bundler_strategies = []
@@ -16,6 +15,10 @@ module RailsTemplater
 
     def orm
       @orm ||= Orm.new
+    end
+
+    def post_bundler(&block)
+      @post_bundler_strategies << block
     end
 
     def recipe(name)
