@@ -17,3 +17,4 @@ templater.post_bundler_strategies << lambda do
 end
 
 apply(templater.recipe('remarkable')) if yes?("\n\nWould you like to add Remarkable RSpec matchers? [y|n]: ", Thor::Shell::Color::BLUE)
+apply templater.recipe('factory_girl')

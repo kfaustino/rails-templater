@@ -2,8 +2,10 @@ gem 'capybara', '0.4.0', :group => :test
 gem 'cucumber-rails', :group => :test
 gem 'launchy', :group => :test
 
-cucumber_generate_command = "cucumber:install --rspec --capybara"
+cucumber_generate_command = "cucumber:install --capybara"
 cucumber_generate_command << ' --skip-database' if templater.orm.mongoid?
+cucumber_generate_command << ' --rspec' if templater.testing_framework.rspec?
+cucumber_generate_command << ' --testunit' if templater.testing_framework.test_unit?
 
 templater.post_bundler_strategies <<  lambda do
   generate cucumber_generate_command
@@ -15,7 +17,9 @@ templater.post_bundler_strategies <<  lambda do
     "\nCapybara.save_and_open_page_path = 'tmp/capybara/'",
     :after => 'Capybara.default_selector = :css'
 
-  inject_into_file "features/support/env.rb", templater.load_snippet("factory_girl_#{templater.testing_framework.type}", 'cucumber'), :after => 'ActionController::Base.allow_rescue = false'
+  if templater.testing_framework.rspec? && templater.fixture_replacement.factory_girl?
+    inject_into_file "features/support/env.rb", templater.load_snippet("factory_girl", 'cucumber'), :after => 'ActionController::Base.allow_rescue = false'
+  end
 
   # Mongoid truncation strategy
   if templater.orm.mongoid?
