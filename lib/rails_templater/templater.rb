@@ -1,11 +1,10 @@
 module RailsTemplater
   class Templater
 
-    attr_reader :post_bundler_strategies, :template_options
+    attr_reader :post_bundler_strategies
 
     def initialize
       @post_bundler_strategies = []
-      @template_options = {}
       @template_framework_path = File.join(File.dirname(__FILE__), '..', 'template_framework')
     end
 
