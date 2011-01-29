@@ -1,5 +1,5 @@
 h1. TODO
 
-* Make choices agnostic
+* Add more options for Fixture Replacement
 * Add a choice to load a local configuration YAML with defaults for template input
 * Update Mongoid to RC once stabilized
