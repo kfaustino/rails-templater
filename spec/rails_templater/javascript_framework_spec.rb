@@ -26,4 +26,11 @@ describe RailsTemplater::JavaScriptFramework do
   
   end
   
+  it "only sets type to supported JavaScript Frameworks" do
+    expect{
+      subject.type = :random
+    }.to raise_error(RailsTemplater::NotSupportedError)
+  end
+  
+  
 end
