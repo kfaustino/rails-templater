@@ -6,6 +6,7 @@ module RailsTemplater
   class NotSupportedError < Exception; end
 
   autoload :Cli, 'rails_templater/cli'
+  autoload :FixtureReplacement, 'rails_templater/fixture_replacement'
   autoload :Orm, 'rails_templater/orm'
   autoload :Templater, 'rails_templater/templater'
   autoload :TestingFramework, 'rails_templater/testing_framework'

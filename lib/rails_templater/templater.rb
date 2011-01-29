@@ -10,6 +10,10 @@ module RailsTemplater
       @template_framework_path = File.join(File.dirname(__FILE__), '..', 'template_framework')
     end
 
+    def fixture_replacement
+      @fixture_replacement ||= FixtureReplacement.new
+    end
+
     def orm
       @orm ||= Orm.new
     end
