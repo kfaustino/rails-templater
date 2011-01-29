@@ -4,7 +4,7 @@ $LOAD_PATH.unshift(File.expand_path('./../../', __FILE__))
 require 'rails_templater'
 require File.join(File.dirname(__FILE__), 'core_ext.rb')
 
-required_recipes = %w(default mongoid jquery haml rspec factory_girl remarkable)
+required_recipes = %w(orm rspec default jquery haml factory_girl remarkable)
 required_recipes.each {|required_recipe| apply templater.recipe(required_recipe)}
 
 say("\nInitial generation complete\n", Thor::Shell::Color::YELLOW)
