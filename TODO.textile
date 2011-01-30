@@ -1,3 +1,7 @@
 h1. TODO
 
 * Add more options for Fixture Replacement
+* Add some RVM support?
+* Devise recipe
+* SimpleForm recipe
+* Shoulda RSpec matchers for ActiveRecord
