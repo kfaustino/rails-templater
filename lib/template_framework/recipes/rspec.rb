@@ -1,3 +1,5 @@
+say("\nReplacing TestUnit with RSpec as your Testing Framework\n", Thor::Shell::Color::YELLOW )
+
 gem 'rspec-rails', '>= 2.4.1', :group => [:development]
 
 remove_dir 'test'

@@ -15,7 +15,7 @@ module RailsTemplater
     
     SUPPORTED_TYPES.each do |type|
       define_method "#{type}?" do
-        @type == type
+        self.type == type
       end
     end
     

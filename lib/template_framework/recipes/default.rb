@@ -11,6 +11,4 @@ create_file 'tmp/.gitkeep'
 
 get "http://html5shiv.googlecode.com/svn/trunk/html5.js", "public/javascripts/html5.js"
 
-git :init
-
-append_file '.gitignore', templater.load_template('gitignore','git')
+apply templater.recipe('git')

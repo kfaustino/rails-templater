@@ -9,7 +9,9 @@ testing_framework_options = {
 print_table testing_framework_options.to_a, :ident => 4
 
 testing_framework_selection = ask("\nOption: ", Thor::Shell::Color::BLUE)
-templater.testing_framework.type = testing_framework_options[testing_framework_selection].underscore.to_sym
+if testing_framework_selection.present?
+  templater.testing_framework.type = testing_framework_options[testing_framework_selection].underscore.to_sym
+end
 
 $stdout << "\n\n"
 

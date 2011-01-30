@@ -9,7 +9,9 @@ orm_options = {
 print_table orm_options.to_a, :ident => 4
 
 orm_selection = ask("\nOption: ", Thor::Shell::Color::BLUE)
-templater.orm.type = orm_options[orm_selection].underscore.to_sym
+if orm_selection.present?
+  templater.orm.type = orm_options[orm_selection].underscore.to_sym
+end
 
 $stdout << "\n\n"
 

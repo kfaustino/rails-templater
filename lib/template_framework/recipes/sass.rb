@@ -35,8 +35,6 @@ if yes?("\n[Stylesheets] Would you like to use Sass for Syntactically Awesome St
           "--using blueprint/basic"
         when :compass_blueprint_semantic
           "--using blueprint/semantic"
-        else
-          ''
       end
 
       compass_command = "compass init rails . #{blueprint_option} --css-dir=#{compass_css_dir} --sass-dir=#{compass_sass_dir} "

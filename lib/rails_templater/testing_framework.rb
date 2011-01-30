@@ -5,17 +5,17 @@ module RailsTemplater
     SUPPORTED_TYPES = [:rspec, :test_unit]
     
     def type
-      @testing_framework || DEFAULT
+      @type || DEFAULT
     end
     
     def type=(value)
       raise NotSupportedError unless SUPPORTED_TYPES.include?(value)
-      @testing_framework ||= value
+      @type ||= value
     end
     
     SUPPORTED_TYPES.each do |type|
       define_method "#{type}?" do
-        @testing_framework == type
+        self.type == type
       end
     end
     
