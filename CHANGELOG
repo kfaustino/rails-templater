@@ -1,4 +1,4 @@
-0.0.3 (January 30, 2011)
+0.1.1 (January 30, 2011)
   rails-templater choices are now agnostic
   Add ActiveRecord as an ORM option
   Add TestUnit as a Testing Framework option
@@ -10,7 +10,6 @@
   Compass has three options: core, blueprint semantic, and blueprint basic
   Cucumber is an optional choice for Integration Testing
   
-
 0.0.2 (January 23, 2011)
   Add a custom generator for FactoryGirl which uses the new 2.0.0 syntax
 
