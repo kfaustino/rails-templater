@@ -1,11 +1,11 @@
-#require File.join(File.dirname(__FILE__), 'core_extensions.rb')
 $LOAD_PATH.unshift(File.expand_path('./../../', __FILE__))
 
 require 'rails_templater'
 require File.join(File.dirname(__FILE__), 'core_ext.rb')
 
-required_recipes = %w(default orm testing_framework javascript_framework haml sass cucumber)
-required_recipes.each {|required_recipe| apply templater.recipe(required_recipe)}
+%w(default orm testing_framework javascript_framework haml sass cucumber).each do |recipe|
+  apply templater.recipe(recipe)
+end
 
 say("\nInitial generation complete\n", Thor::Shell::Color::YELLOW)
 
