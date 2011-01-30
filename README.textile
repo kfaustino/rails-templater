@@ -1,0 +1,58 @@
+h1. Rails Templater
+
+Rails Templater is a gem which generates new Ruby on Rails 3 applications the way you want them. Based on your choices, Rails Templater will create an application configured correctly. For example, if you select Mongoid for an ODM and RSpec for your testing framework, Rails Templater will generate all necessary hooks to handle dropping your collections from MongoDB. The project was inspired by ffmike's "BigOldRailsTemplate":http://github.com/ffmike/BigOldRailsTemplate Rails 2 template project.
+
+h2. Install
+
+  @gem install rails_templater@
+
+h2. Usage
+
+At the command prompt, create a new Rails application using the @templater@ command:
+
+  @templater myapp_name@
+
+h2. Generated Application
+
+Rails Templater provides you with the following choices during application generation:
+
+h3. Database
+
+* "Mongoid":http://mongoid.org/ as your Object Document Mapper for MongoDB
+* ActiveRecord as your Object Relational Mapper for Relational Databases
+
+h3. Testing
+
+* "RSpec":http://github.com/rspec/rspec
+**  "Remarkable":http://github.com/remarkable/remarkable for ActiveModel RSpec matchers (optional)
+* TestUnit
+
+h4. Fixture Replacement
+
+* "FactoryGirl":http://github.com/thoughtbot/factory_girl (Dependent on RSpec recipe)
+
+h4. Integration Testing
+
+* "Cucumber":http://github.com/aslakhellesoy/cucumber-rails (optional)
+
+h3. JavaScript
+
+* "jQuery":http://jquery.com/
+* "Prototype":http://www.prototypejs.org/
+
+h3. Template Engine
+
+* ERB
+* "Haml":http://haml-lang.com (optional)
+
+h3. Stylesheets 
+
+* "Sass":http://sass-lang.com for generating CSS (optional)
+**  "Compass":http://compass-style.org as your stylesheet authoring framework (optional)
+
+    
+h2. Note on Patches/Pull Requests
+ 
+* Fork the project.
+* Make your feature addition or bug fix in a branch.
+* Send me a pull request.
