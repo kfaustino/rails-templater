@@ -10,6 +10,7 @@ module RailsTemplater
   autoload :JavaScriptFramework, 'rails_templater/javascript_framework'
   autoload :Orm, 'rails_templater/orm'
   autoload :Templater, 'rails_templater/templater'
+  autoload :TemplateEngine, 'rails_templater/template_engine'
   autoload :TestingFramework, 'rails_templater/testing_framework'
 
   def template_runner

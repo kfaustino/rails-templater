@@ -15,9 +15,13 @@ module RailsTemplater
     def orm
       @orm ||= Orm.new
     end
-    
+
     def javascript_framework
       @javascript_framework ||= JavaScriptFramework.new
+    end
+
+    def template_engine
+      @template_engine ||= TemplateEngine.new
     end
 
     def post_bundler(&block)
@@ -40,10 +44,10 @@ module RailsTemplater
       end
 
     end
-    
+
     def testing_framework
       @testing_framework ||= TestingFramework.new
     end
-    
+
   end
 end
