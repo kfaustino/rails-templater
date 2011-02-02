@@ -1,17 +1,25 @@
+0.1.2 (February 1, 2011)
+
+  * Added the Slim template engine (via fredwu)
+  * Fixed the layout template for Haml
+
 0.1.1 (January 30, 2011)
-  rails-templater choices are now agnostic
-  Add ActiveRecord as an ORM option
-  Add TestUnit as a Testing Framework option
-  Add Prototype as a JavaScript Framework option
-  Remarkable RSpec matchers are optional and are dependent on the RSpec recipe
-  Haml is an optional choice for your View Templates
-  Sass is an optional choice for composing Stylesheets
-  Compass is now dependent on the Sass recipe
-  Compass has three options: core, blueprint semantic, and blueprint basic
-  Cucumber is an optional choice for Integration Testing
+
+  * rails-templater choices are now agnostic
+  * Add ActiveRecord as an ORM option
+  * Add TestUnit as a Testing Framework option
+  * Add Prototype as a JavaScript Framework option
+  * Remarkable RSpec matchers are optional and are dependent on the RSpec recipe
+  * Haml is an optional choice for your View Templates
+  * Sass is an optional choice for composing Stylesheets  
+  * Compass is now dependent on the Sass recipe
+  * Compass has three options: core, blueprint semantic, and blueprint basic  
+  * Cucumber is an optional choice for Integration Testing
   
 0.0.2 (January 23, 2011)
-  Add a custom generator for FactoryGirl which uses the new 2.0.0 syntax
+
+  * Add a custom generator for FactoryGirl which uses the new 2.0.0 syntax
 
 0.0.1 (January 13, 2011)
-  First version
+
+  * First version
