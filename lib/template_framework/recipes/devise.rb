@@ -11,7 +11,7 @@ if yes?("\n[User authentication] Would you like to add flexible user authenticat
   # hpricot is required for haml or slim views, haml2slim is required for slim
   if generate_views && (templater.template_engine.haml? || templater.template_engine.slim?)
     gem 'hpricot'
-    gem 'ruby_parser'
+    gem 'ruby_parser' if templater.template_engine.haml?
     gem 'haml2slim' if templater.template_engine.slim?
   end
 
