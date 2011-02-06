@@ -4,7 +4,7 @@ template_engine_options = {
   'Option' => 'Template Engine',
   '1' => 'Haml',
   '2' => 'Slim',
-  '3' => 'ERb',
+  '3' => 'Erb',
 }
 
 print_table template_engine_options.to_a, :ident => 4
