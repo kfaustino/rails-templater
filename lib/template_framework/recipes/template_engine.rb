@@ -11,7 +11,7 @@ print_table template_engine_options.to_a, :ident => 4
 
 template_engine_selection = ask("\nOption: ", Thor::Shell::Color::BLUE)
 if template_engine_selection.present?
-  templater.template_engine.type =  template_engine_options[template_engine_selection].underscore.to_sym
+  templater.template_engine.type =  template_engine_options[template_engine_selection].downcase.to_sym
 end
 
 $stdout << "\n\n"
