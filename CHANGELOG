@@ -1,3 +1,10 @@
+0.2.0 (February 6, 2011)
+  * Added 960 Grid System option to Compass (via guilleiguaran)
+  * Added shoulda-context option for TestUnit (via guilleiguaran)
+  * Added CoverMe code coverage recipe for Ruby 1.9 (via guilleiguaran)
+  * Added RCov code coverage recipe for Ruby 1.8 (via guilleiguaran)
+  * Mongoid recipe is now using 2.0.0.rc.7
+  
 0.1.2 (February 1, 2011)
 
   * Added the Slim template engine (via fredwu)
