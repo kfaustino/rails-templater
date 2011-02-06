@@ -39,10 +39,11 @@ if yes?("\n[Stylesheets] Would you like to use Sass for Syntactically Awesome St
         when :compass_blueprint_semantic
           "--using blueprint/semantic"
         when :compass_960
+          gem 'compass-960-plugin'
           "-r ninesixty --using 960"
       end
 
-      compass_command = "compass init rails . #{framework_option} --css-dir=#{compass_css_dir} --sass-dir=#{compass_sass_dir} "
+      compass_command = "bundle exec compass init rails . #{framework_option} --css-dir=#{compass_css_dir} --sass-dir=#{compass_sass_dir} "
 
       templater.post_bundler do
         run compass_command
