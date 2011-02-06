@@ -19,4 +19,9 @@ templater.post_bundler do
 end
 
 apply(templater.recipe('remarkable')) if yes?("\n\nWould you like to add Remarkable RSpec matchers? [y|n]: ", Thor::Shell::Color::BLUE)
+if RUBY_VERSION >= "1.9"
+  apply(templater.recipe('cover_me')) if yes?("\n\nWould you like to add CoverMe for code coverage test? [y|n]: ", Thor::Shell::Color::BLUE)
+else
+  apply(templater.recipe('rcov')) if yes?("\n\nWould you like to add RCov for code coverage test? [y|n]: ", Thor::Shell::Color::BLUE)
+end
 apply templater.recipe('factory_girl')
