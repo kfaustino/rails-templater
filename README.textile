@@ -44,8 +44,8 @@ h3. JavaScript
 h3. Template Engine
 
 * ERB
-* "Haml":http://haml-lang.com (optional)
-* "Slim":http://github.com/stonean/slim (optional)
+* "Haml":http://haml-lang.com
+* "Slim":http://github.com/stonean/slim
 
 h3. Stylesheets
 
