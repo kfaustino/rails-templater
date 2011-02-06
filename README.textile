@@ -26,6 +26,7 @@ h3. Testing
 * "RSpec":http://github.com/rspec/rspec
 **  "Remarkable":http://github.com/remarkable/remarkable for ActiveModel RSpec matchers (optional)
 * TestUnit
+**  "Shoulda-Context":http://github.com/thoughtbot/shoulda-context for contexts in TestUnit (optional)
 
 h4. Fixture Replacement
 
