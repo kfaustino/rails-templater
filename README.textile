@@ -36,7 +36,7 @@ h4. Integration Testing
 
 * "Cucumber":http://github.com/aslakhellesoy/cucumber-rails (optional)
 
-h4. Code Coverage Test
+h4. Code Coverage
 
 * "RCov":http://github.com/relevance/rcov (optional, only for Ruby 1.8)
 
