@@ -35,7 +35,7 @@ module RailsTemplater
     ['snippet', 'template'].each do |type|
 
       define_method "#{type}_path" do |group|
-        File.expand_path("#{type.pluralize}/#{group}", @template_framework_path)
+        File.expand_path("#{type}s/#{group}", @template_framework_path)
       end
 
       define_method "load_#{type}" do |name, group|
