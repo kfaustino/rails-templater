@@ -1,3 +1,6 @@
+0.2.1 (February 9, 2011)
+  * Fixed path-generation not being pluralized in Rails 3.0.4 [tariksin]
+
 0.2.0 (February 6, 2011)
   * Added 960 Grid System option to Compass (via guilleiguaran)
   * Added shoulda-context option for TestUnit (via guilleiguaran)
