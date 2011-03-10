@@ -39,6 +39,7 @@ h4. Integration Testing
 h4. Code Coverage
 
 * "RCov":http://github.com/relevance/rcov (optional, only for Ruby 1.8)
+* "CoverMe":https://github.com/markbates/cover_me (optional, only for Ruby 1.9)
 
 h3. JavaScript
 
