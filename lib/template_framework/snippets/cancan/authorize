@@ -1,0 +1,11 @@
+
+  # CanCan configuration
+  # Automatically authorize all actions in a RESTful style resource controller
+  #load_and_authorize_resource
+  # If you want to ensure authorization happens on every action in your application, add check_authorization to your ApplicationController
+  # If you want to skip this add skip_authorization_check to a controller subclass
+  #check_authorization
+  # Handle unauthorized access
+  rescue_from CanCan::AccessDenied do |exception|
+    redirect_to root_url, :alert => exception.message
+  end
