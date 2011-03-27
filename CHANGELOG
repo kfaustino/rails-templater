@@ -1,3 +1,7 @@
+In Development
+
+* FIX: Use syck as YAML engine for mongoid recipe [brendte]
+
 0.2.1 (February 9, 2011)
   * Fixed path-generation not being pluralized in Rails 3.0.4 [tariksin]
 
