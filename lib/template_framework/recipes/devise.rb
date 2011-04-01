@@ -10,3 +10,14 @@ templater.post_bundler do
   generate "devise #{model_name}"
   generate "devise:views -e #{templater.template_engine.type}" if generate_views
 end
+
+# Modify ActionMailer configuration for Devise
+gsub_file 'config/environments/development.rb',
+  /# Don't care if the mailer can't send/,
+  '# ActionMailer Config'
+inject_into_file 'config/environments/development.rb',
+  templater.load_snippet('actionmailer_development', 'devise'),
+  :after => '# ActionMailer Config'
+inject_into_file 'config/environments/production.rb',
+  templater.load_snippet('actionmailer_production', 'devise'),
+  :after => 'config.i18n.fallbacks = true'
