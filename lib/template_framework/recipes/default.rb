@@ -10,3 +10,4 @@ create_file 'README'
 get "http://html5shiv.googlecode.com/svn/trunk/html5.js", "public/javascripts/html5.js"
 
 apply templater.recipe('git')
+apply templater.recipe('rvm')
