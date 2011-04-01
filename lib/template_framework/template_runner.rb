@@ -3,7 +3,7 @@ $LOAD_PATH.unshift(File.expand_path('./../../', __FILE__))
 require 'rails_templater'
 require File.join(File.dirname(__FILE__), 'core_ext.rb')
 
-%w(default orm testing_framework code_coverage javascript_framework template_engine sass cucumber).each do |recipe|
+%w(default orm testing_framework code_coverage javascript_framework template_engine sass auth cucumber).each do |recipe|
   apply templater.recipe(recipe)
 end
 
