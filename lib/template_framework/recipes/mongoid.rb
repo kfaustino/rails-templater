@@ -1,7 +1,7 @@
 say("\nReplacing ActiveRecord with Mongoid\n", Thor::Shell::Color::YELLOW )
 
-gem 'mongoid', '2.0.0.rc.7'
-gem 'bson_ext', '~> 1.2'
+gem 'mongoid', '~> 2.0'
+gem 'bson_ext', '~> 1.3'
 
 gsub_file 'config/application.rb', 'require "active_record/railtie"', '# require "active_record/railtie"'
 
