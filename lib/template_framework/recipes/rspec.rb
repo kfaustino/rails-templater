@@ -23,6 +23,3 @@ if templater.orm.mongoid?
 else
   gem('shoulda-matchers', '~> 1.0') if yes?("\n\nWould you like to add shoulda matchers? [y|n]: ", Thor::Shell::Color::BLUE)
 end
-
-# Fixture Replacement
-apply templater.recipe('factory_girl')
