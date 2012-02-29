@@ -1,9 +1,6 @@
-.ackrc
-.rvmrc
 config/database.yml
 config/mongoid.yml
 public/cache/
-public/stylesheets/compiled/
 public/system/*
 tmp/restart.txt
 coverage/
