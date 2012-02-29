@@ -32,6 +32,5 @@ if yes?("\n[Integration Testing] Would you like to add integration testing with 
         create_file 'features/step_definitions/mongoid_steps.rb', templater.load_template('features/step_definitions/mongoid_steps.rb', 'mongoid')
       end
     end
-
   end
 end

@@ -1,6 +1,6 @@
 say("\nReplacing TestUnit with RSpec as your Testing Framework\n", Thor::Shell::Color::YELLOW )
 
-gem 'rspec-rails', '>= 2.4.1', :group => [:development]
+gem 'rspec-rails', '~> 2.8', :group => [:development]
 
 remove_dir 'test'
 gsub_file 'config/application.rb', 'require "rails/test_unit/railtie"', '# require "rails/test_unit/railtie"'

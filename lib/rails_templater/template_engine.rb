@@ -18,6 +18,5 @@ module RailsTemplater
         self.type == type
       end
     end
-
   end
 end
