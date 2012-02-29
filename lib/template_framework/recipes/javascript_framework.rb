@@ -3,7 +3,7 @@ say "\nWhich JavaScript Framework would you like to use?\n", Thor::Shell::Color:
 javascript_framework_options = {
   'Option' => 'JavaScript Framework',
   '1' => 'jquery',
-  '2' => 'Prototype'
+  '2' => 'prototype'
 }
 
 print_table javascript_framework_options.to_a, :ident => 4
@@ -15,4 +15,8 @@ end
 
 $stdout << "\n\n"
 
-apply templater.recipe('jquery') if templater.javascript_framework.jquery?
+if templater.javascript_framework.jquery?
+  gem 'jquery-rails'
+else
+  gem 'prototype-rails'
+end
