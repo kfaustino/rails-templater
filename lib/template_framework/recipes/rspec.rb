@@ -18,7 +18,11 @@ templater.post_bundler do
   end
 end
 
-apply(templater.recipe('remarkable')) if yes?("\n\nWould you like to add Remarkable RSpec matchers? [y|n]: ", Thor::Shell::Color::BLUE)
+if templater.orm.mongoid?
+  gem('mongoid-rspec', '~> 1.4') if yes?("\n\nWould you like to add Mongoid RSpec matchers? [y|n]: ", Thor::Shell::Color::BLUE)
+else
+  gem('shoulda-matchers', '~> 1.0') if yes?("\n\nWould you like to add shoulda matchers? [y|n]: ", Thor::Shell::Color::BLUE)
+end
 
 # Fixture Replacement
 apply templater.recipe('factory_girl')
