@@ -24,6 +24,8 @@ if yes?("\n[Stylesheets] Would you like to use Compass? [y|n]: ", Thor::Shell::C
   end
 
   unless design_framework == :none
+    remove_file 'app/assets/stylesheets/application.css'
+
     gem 'compass-rails', group: :assets
 
     framework_option = case design_framework
