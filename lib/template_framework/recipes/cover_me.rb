@@ -1,4 +1,4 @@
-gem 'cover_me', '>= 1.0.0.rc5', :group => :test
+gem 'cover_me', '~> 1.2', :group => :test
 
 templater.post_bundler do
   generate "cover_me:install"
