@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <%= csrf_meta_tags %>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <!--[if lt IE 9]>
+    <%= javascript_include_tag "application" %>
+  <![endif]-->
+</head>
+<body>
+  <%= yield %>
+
+  <%= javascript_include_tag "application" %>
+  </body>
+</html>

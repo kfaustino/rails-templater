@@ -10,11 +10,10 @@ template_engine_options = {
 print_table template_engine_options.to_a, :ident => 4
 
 template_engine_selection = ask("\nOption: ", Thor::Shell::Color::BLUE)
-if template_engine_selection.present?
+if template_engine_options.keys[1..-1].include?(template_engine_selection)
   templater.template_engine.type =  template_engine_options[template_engine_selection].downcase.to_sym
 end
 
 $stdout << "\n\n"
 
-apply templater.recipe('haml') if templater.template_engine.haml?
-apply templater.recipe('slim') if templater.template_engine.slim?
+apply templater.recipe(templater.template_engine.type)
