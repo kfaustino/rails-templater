@@ -1,0 +1,5 @@
+
+config.generators do |g|
+  g.test_framework      :test_unit, :fixture_replacement => :factory_girl
+  g.fixture_replacement :factory_girl, :dir => "test/factories"
+end

@@ -2,7 +2,7 @@ module RailsTemplater
   class FixtureReplacement
 
     DEFAULT = :factory_girl
-    SUPPORTED_TYPES = [:factory_girl]
+    SUPPORTED_TYPES = [:factory_girl, :fabrication]
 
     def type
       @type || DEFAULT

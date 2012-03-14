@@ -1,7 +1,7 @@
+say("\nReplacing Fixtures with Fabrication\n", Thor::Shell::Color::YELLOW)
+
 gem 'fabrication'
 
-if templater.testing_framework.rspec?
-  environment templater.load_snippet('generator_rspec', 'fabrication')
-else
-  environment templater.load_snippet('generator_test-unit', 'fabrication')
+templater.post_bundler do
+  environment templater.load_snippet("generator_#{templater.testing_framework.type}", 'fabrication')
 end

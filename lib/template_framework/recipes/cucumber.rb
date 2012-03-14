@@ -9,19 +9,15 @@ if yes?("\n[Integration Testing] Would you like to add integration testing with 
   templater.post_bundler do
     generate cucumber_generate_command
 
-    if templater.testing_framework.rspec? && templater.fixture_replacement.factory_girl?
+    if templater.fixture_replacement.factory_girl?
       inject_into_file "features/support/env.rb", templater.load_snippet("factory_girl", 'cucumber'), :after => 'ActionController::Base.allow_rescue = false'
+    elsif templater.fixture_replacement.fabrication?
+      generate 'fabrication:cucumber_steps'
     end
 
     # Mongoid truncation strategy
     if templater.orm.mongoid?
       gsub_file 'features/support/env.rb', 'DatabaseCleaner.strategy = :transaction', 'DatabaseCleaner.strategy = :truncation'
-
-
-      # Compliment to factory_girl step definitions
-      if templater.fixture_replacement.factory_girl?
-        create_file 'features/step_definitions/mongoid_steps.rb', templater.load_template('features/step_definitions/mongoid_steps.rb', 'mongoid')
-      end
     end
   end
 end
