@@ -9,7 +9,7 @@ javascript_framework_options = {
 print_table javascript_framework_options.to_a, :ident => 4
 
 javascript_framework_selection = ask("\nOption: ", Thor::Shell::Color::BLUE)
-if javascript_framework_selection.present?
+if javascript_framework_options.keys[1..-1].include?(javascript_framework_selection)
   templater.javascript_framework.type =  javascript_framework_options[javascript_framework_selection].downcase.to_sym
 end
 
