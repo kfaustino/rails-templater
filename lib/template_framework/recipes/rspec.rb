@@ -19,7 +19,7 @@ templater.post_bundler do
 end
 
 if templater.orm.mongoid?
-  gem('mongoid-rspec', '~> 1.4') if yes?("\n\nWould you like to add Mongoid RSpec matchers? [y|n]: ", Thor::Shell::Color::BLUE)
+  gem('mongoid-rspec', '~> 1.4', :group => :test) if yes?("\n\nWould you like to add Mongoid RSpec matchers? [y|n]: ", Thor::Shell::Color::BLUE)
 else
-  gem('shoulda-matchers', '~> 1.0') if yes?("\n\nWould you like to add shoulda matchers? [y|n]: ", Thor::Shell::Color::BLUE)
+  apply templater.recipe('shoulda_matchers')
 end

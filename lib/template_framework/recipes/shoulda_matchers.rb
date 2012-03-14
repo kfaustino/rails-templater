@@ -1,0 +1,1 @@
+gem('shoulda-matchers', '~> 1.0', :group => :test) if yes?("\n\nWould you like to add shoulda matchers? [y|n]: ", Thor::Shell::Color::BLUE)

@@ -4,4 +4,5 @@ if yes?("\nWould you like to use Shoulda contexts? [y|n]: ", Thor::Shell::Color:
   gem 'shoulda-context', :group => :test
 end
 
+apply templater.recipe('shoulda_matchers')
 
