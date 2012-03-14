@@ -1,5 +1,16 @@
 In Development
 
+0.3.0 (March 14, 2012)
+  * Updated to work with Rails Asset Pipeline
+  * Removed Sass recipe as it is now the default in Rails
+  * Added Pry recipe for IRB Replacement
+  * Added Fabrication as recommended option for Fixture Replacement
+  * Removed Remarkable, replaced with mongo
+  * When Erb is selected as the template framework, layout.html.erb matches Haml & Slim recipes
+  * Removed custom FactoryGirl generators, using factory_girl_rails
+  * Adding mongoid-rspec for matchers option when Mongoid & RSpec are selected
+  * Adding should-matchers for ActiveRecord matchers for RSpec & TestUnit
+
 0.2.1 (February 9, 2011)
   * Fixed path-generation not being pluralized in Rails 3.0.4 [tariksin]
 
@@ -9,7 +20,7 @@ In Development
   * Added CoverMe code coverage recipe for Ruby 1.9 (via guilleiguaran)
   * Added RCov code coverage recipe for Ruby 1.8 (via guilleiguaran)
   * Mongoid recipe is now using 2.0.0.rc.7
-  
+
 0.1.2 (February 1, 2011)
 
   * Added the Slim template engine (via fredwu)
@@ -23,11 +34,11 @@ In Development
   * Add Prototype as a JavaScript Framework option
   * Remarkable RSpec matchers are optional and are dependent on the RSpec recipe
   * Haml is an optional choice for your View Templates
-  * Sass is an optional choice for composing Stylesheets  
+  * Sass is an optional choice for composing Stylesheets
   * Compass is now dependent on the Sass recipe
-  * Compass has three options: core, blueprint semantic, and blueprint basic  
+  * Compass has three options: core, blueprint semantic, and blueprint basic
   * Cucumber is an optional choice for Integration Testing
-  
+
 0.0.2 (January 23, 2011)
 
   * Add a custom generator for FactoryGirl which uses the new 2.0.0 syntax
