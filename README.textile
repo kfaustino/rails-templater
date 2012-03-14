@@ -24,17 +24,22 @@ h3. Database
 h3. Testing
 
 * "RSpec":http://github.com/rspec/rspec
-**  "Remarkable":http://github.com/remarkable/remarkable for ActiveModel RSpec matchers (optional)
 * TestUnit
-**  "Shoulda-Context":http://github.com/thoughtbot/shoulda-context for contexts in TestUnit (optional)
+
+h4. Matchers (optional)
+
+* "mongoid-rspec":https://github.com/evansagge/mongoid-rspec for Mongoid RSpec matchers
+* "shoulda-matchers":https://github.com/thoughtbot/shoulda-matchers for ActiveRecord matchers in RSpec/TestUnit
+* "shoulda-context":http://github.com/thoughtbot/shoulda-context for contexts in TestUnit
 
 h4. Fixture Replacement
 
-* "FactoryGirl":http://github.com/thoughtbot/factory_girl (Dependent on RSpec recipe)
+* "Fabrication":http://fabricationgem.org/
+* "FactoryGirl":http://github.com/thoughtbot/factory_girl
 
-h4. Integration Testing
+h4. Integration Testing (optional)
 
-* "Cucumber":http://github.com/aslakhellesoy/cucumber-rails (optional)
+* "Cucumber":http://github.com/aslakhellesoy/cucumber-rails
 
 h4. Code Coverage
 
@@ -48,15 +53,13 @@ h3. JavaScript
 
 h3. Template Engine
 
-* ERB
 * "Haml":http://haml-lang.com
 * "Slim":http://github.com/stonean/slim
+* ERB
 
-h3. Stylesheets
+h3. Sass Extensions (optional)
 
-* "Sass":http://sass-lang.com for generating CSS (optional)
-**  "Compass":http://compass-style.org as your stylesheet authoring framework (optional)
-
+*  "Compass":http://compass-style.org as your stylesheet authoring framework
 
 h2. Note on Patches/Pull Requests
 
