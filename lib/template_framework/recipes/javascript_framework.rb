@@ -10,7 +10,7 @@ print_table javascript_framework_options.to_a, :ident => 4
 
 javascript_framework_selection = ask("\nOption: ", Thor::Shell::Color::BLUE)
 if javascript_framework_selection.present?
-  templater.javascript_framework.type =  javascript_framework_options[javascript_framework_selection].underscore.to_sym
+  templater.javascript_framework.type =  javascript_framework_options[javascript_framework_selection].downcase.to_sym
 end
 
 $stdout << "\n\n"
@@ -20,3 +20,6 @@ if templater.javascript_framework.jquery?
 else
   gem 'prototype-rails'
 end
+
+remove_file 'app/assets/javascripts/application.js'
+create_file 'app/assets/javascripts/application.js', templater.load_template('app/assets/javascripts/application.js', templater.javascript_framework.type)
